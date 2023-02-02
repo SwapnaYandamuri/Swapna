@@ -1,0 +1,72 @@
+PLUS MINUS-
+class Result {
+
+    /*
+     * Complete the 'plusMinus' function below.
+     *
+     * The function accepts INTEGER_ARRAY arr as parameter.
+     */
+
+    public static void plusMinus(List<Integer> arr) {
+    double pos=0,neg=0,zero=0;
+    int n=arr.size(),value=0;
+    for(int i=0;i<n;i++){
+        value=arr.get(i);
+    
+    if(value>0){
+        pos++;
+        
+    }   
+    else if(value<0){
+        neg++;
+        
+    }
+    else{
+        zero++;
+    }
+    }
+    System.out.println(String.format("%.6f",pos/n));
+    
+    System.out.println(String.format("%.6f",neg/n));
+    System.out.println(String.format("%.6f",zero/n));
+    
+    
+        
+    
+    
+
+    }
+
+}
+MINI MAX-
+class Result {
+
+    /*
+     * Complete the 'miniMaxSum' function below.
+     *
+     * The function accepts INTEGER_ARRAY arr as parameter.
+     */
+
+    public static void miniMaxSum(List<Integer> arr) {
+    // Write your code here
+    int n=arr.size();
+    long max=0;
+    Collections.sort(arr);
+    for(int i=1;i<n;i++){
+        max=max+arr.get(i);    
+    }
+    long min=0;
+    for(int j=0;j<n-1;j++){
+        min=min+arr.get(j);
+        
+    }
+    System.out.printf(min+" "+max);
+    
+    
+    
+    
+    
+
+    }
+
+}

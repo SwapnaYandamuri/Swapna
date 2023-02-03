@@ -29,7 +29,30 @@ class Result {
     
     System.out.println(String.format("%.6f",neg/n));
     System.out.println(String.format("%.6f",zero/n));
-    
+    PANGRAMS-
+    class Result {
+
+    /*
+     * Complete the 'pangrams' function below.
+     *
+     * The function is expected to return a STRING.
+     * The function accepts STRING s as parameter.
+     */
+
+    public static String pangrams(String s) {
+    // Write your code her
+        HashSet<Character> set1 = setChars(s.toLowerCase());
+        return (set1.size()==27) ? "pangram" : "not pangram";
+    }
+    static HashSet<Character> setChars(String s){
+        HashSet<Character> hashSet = new HashSet<>();
+        for(char ch : s.toCharArray()){
+            hashSet.add(ch);
+        }
+        return hashSet;
+    }
+            
+}
     
         
     

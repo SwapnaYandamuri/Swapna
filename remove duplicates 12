@@ -1,0 +1,12 @@
+public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner string = new Scanner(System.in);
+        String str = string.nextLine();
+        LinkedHashSet<Character> set = new LinkedHashSet<>();
+        for(int i=0;i<str.length();i++){
+            set.add(str.charAt(i));
+        }
+        for(char ch: set){
+            System.out.print(ch);
+        }
+}

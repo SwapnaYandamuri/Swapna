@@ -202,6 +202,61 @@ public static String timeConversion(String s) {
     return s.substring(0,s.length()-2);
     
  }
+ PERMUTING TWO ARRAYS
+ public static String twoArrays(int k, List<Integer> A, List<Integer> B) {
+    // Write your code here
+    List<Integer> li=new ArrayList<>();
+    Collections.sort(A);
+    Collections.sort(B,Collections.reverseOrder());
+    int a=0;
+    for(int i=0;i<A.size();i++){
+        a=A.get(i)+B.get(i);
+        li.add(a);
+    }
+    for(int list: li){
+        if(list<k){
+            return "NO";
+        }
+        
+    }
+    return "YES";    
+    
+    
+    }
+}
+SUBARRAY DIVISION-
+public static int birthday(List<Integer> s, int d, int m) {
+    // Write your code here
+    ArrayList<Integer> li=(ArrayList<Integer>)s;
+    int count=0;
+    for(int i=0;i<=li.size()-m;i++){
+        int sum=0;
+        for(int j=i;j<i+m;j++){
+            sum=sum+li.get(j);
+            
+        }
+        if(sum==d){
+            count++;
+        }
+    }
+    return count;
+    
+
+    }
+
+}
+XOR STRINGS-
+public static String stringsXOR(String s, String t) {
+        String res = new String("");
+        for(int i = 0; i < s.length(); i++) {
+            if(s.charAt(i) == t.charAt(i))
+                res += "0";
+            else
+                res += "1";
+        }
+
+        return res;
+    }
 
 
 

@@ -257,6 +257,59 @@ public static String stringsXOR(String s, String t) {
 
         return res;
     }
+    ZIG ZAG SEQUENCE-
+    public static void main (String[] args) throws java.lang.Exception {
+        Scanner kb = new Scanner(System.in);
+        int test_cases = kb.nextInt();
+        for(int cs = 1; cs <= test_cases; cs++){
+            int n = kb.nextInt();
+             int a[] = new int[n];
+            for(int i = 0; i < n; i++){
+                a[i] = kb.nextInt();
+            }
+            findZigZagSequence(a, n);
+        }
+   }
+   TOWER BREAKERS-
+    public static int towerBreakers(int n, int m) {
+    // Write your code here
+    int towers=n;
+    int height=m;
+    int x,y;
+    for(int i=0;i<m;i++){
+        if(m==1){
+            return 2;
+        }
+        if(n%2==1){
+            return 1;
+            
+        }
+        
+        
+        
+    }
+    return 2;
+    
+
+    }
+
+}
+INSERT A NODE AT A SPECIFIC POSITION IN A LINKED LIST-
+public static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode llist , int data , int position) {
+    SinglyLinkedListNode p=llist;
+    for(int i=0;i<position-1;i++){
+        p=p.next;
+    }
+    SinglyLinkedListNode curr=new SinglyLinkedListNode(data);
+        curr.next = p.next;
+        p.next = curr;
+        if(llist==null){
+            llist=curr;
+        }
+        
+        return llist;
+
+    }
 
 
 
